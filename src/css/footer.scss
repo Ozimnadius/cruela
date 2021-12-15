@@ -1,0 +1,36 @@
+.footer {
+  position: relative;
+  &:before{
+    content: url("/images/crown-black.png");
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: -48px;
+  }
+  &__wrap {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    border-top: 4px solid $txt;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__txt{
+    font-size: 28px;
+  }
+
+  &__title{
+    font-family: Amethysta;
+    font-size: 40px;
+    position: relative;
+
+    &:before{
+      content: url("/images/vanda.png");
+      display: block;
+      position: absolute;
+      top: -105px;
+      left: -70px;
+    }
+  }
+}

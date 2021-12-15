@@ -1,0 +1,31 @@
+.main{
+  border-top: 20px solid $txt;
+  padding-top: 30px;
+
+  &__title{
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: lh(80,90);
+    color: #D80606;
+    margin-bottom: 30px;
+    position: relative;
+
+    &:after{
+      content: url("/images/crown-red.png");
+      display: block;
+      position: absolute;
+      z-index: 100;
+      left: calc(100% + 40px);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__imgs{
+    margin-top: 80px;
+  }
+
+
+}

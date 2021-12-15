@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Athelas';
+    src: url('Athelas-Regular.woff2') format('woff2'),
+        url('Athelas-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Athelas';
+    src: url('Athelas-Bold.woff2') format('woff2'),
+        url('Athelas-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Amethysta';
+    src: url('Amethysta-Regular.woff2') format('woff2'),
+        url('Amethysta-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

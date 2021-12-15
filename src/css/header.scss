@@ -1,0 +1,51 @@
+.header{
+  padding-top: 50px;
+  padding-bottom: 30px;
+  position: relative;
+
+  &:before{
+    content: url("/images/future.png");
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__wrap{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 10px 30px;
+    padding-left: 10px;
+    border: 4px solid $txt;
+  }
+
+  &__title{
+    line-height: 1;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-family: Amethysta;
+    font-size: 65px;
+
+    &:before{
+      content: '24';
+      writing-mode: vertical-lr;
+      text-orientation: upright;
+      font-size: 28px;
+    }
+  }
+
+  &__sub{
+    font-size: 28px;
+    position: relative;
+
+    &:before{
+      content: url("/images/stars.png");
+      display: block;
+      position: absolute;
+      top: -90px;
+      left: -70px;
+    }
+  }
+}

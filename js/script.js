@@ -1,0 +1,2 @@
+const media={mobile:window.matchMedia("(max-width: 767.98px)")};window.addEventListener("load",(function(e){new Swiper(".videos__swiper",{slidesPerView:"auto",spaceBetween:30,navigation:{nextEl:".videos__next",prevEl:".videos__prev"}}),new Swiper(".imgs__swiper",{slidesPerView:"auto",spaceBetween:30,navigation:{nextEl:".imgs__next",prevEl:".imgs__prev"}})}));
+//# sourceMappingURL=script.js.map

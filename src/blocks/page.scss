@@ -1,0 +1,7 @@
+.page{
+  .page__grid{
+    display: grid;
+    grid-template-columns: 208px calc(100% - 238px);
+    grid-gap: 30px;
+  }
+}

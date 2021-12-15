@@ -1,0 +1,21 @@
+.info {
+  border: 2px solid #000000;
+  padding: 10px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  &__txt {
+    font-size: 18px;
+    line-height: lh(18, 20);
+  }
+
+  &__img {
+    margin: 8px 0;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+}
