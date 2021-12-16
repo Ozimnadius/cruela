@@ -1,12 +1,21 @@
 .footer {
   position: relative;
+
   &:before{
-    content: url("/images/crown-black.png");
+    content: '';
+    background: url("/images/crown-black.png") 0 0 no-repeat;
+    background-size: cover;
+    width: 286px;
+    height: 384px;
     display: block;
     position: absolute;
     bottom: 10px;
     left: -48px;
+    @media (max-width: 767.98px){
+      display: none;
+    }
   }
+
   &__wrap {
     padding-top: 30px;
     padding-bottom: 50px;
@@ -14,23 +23,45 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: 767.98px){
+       justify-content: flex-end;
+      border-width: 2px;
+      padding-top: 20px;
+      padding-bottom: 25px;
+    }
   }
 
   &__txt{
     font-size: 28px;
+    @media (max-width: 767.98px){
+      display: none;
+    }
   }
 
   &__title{
     font-family: Amethysta;
     font-size: 40px;
     position: relative;
+    @media (max-width: 767.98px){
+      font-size: 24px;
+    }
 
     &:before{
-      content: url("/images/vanda.png");
+      content: '';
+      background: url("/images/vanda.png") 0 0 no-repeat;
+      background-size: cover;
+      width: 304px;
+      height: 217px;
       display: block;
       position: absolute;
       top: -105px;
       left: -70px;
+      @media (max-width: 767.98px){
+        width: 150px;
+        height: 100px;
+        top: -45px;
+        left: -25px;
+      }
     }
   }
 }

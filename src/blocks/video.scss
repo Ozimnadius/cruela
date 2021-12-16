@@ -1,46 +1,66 @@
-.videos{
+.videos {
 
-  &__swiper{
-    margin-right: -40px;
-    margin-bottom: 20px;
+  @media (max-width: 767.98px){
+    text-align: left;
   }
 
-  &__slide{
-    width: 720px;
+  &__swiper {
+    margin-right: -40px;
+    @media (max-width: 767.98px){
+      margin-right: -10px;
+    }
+  }
+
+  &__slide {
+    width: 400px;
+    @media (max-width: 767.98px){
+      width: 286px;
+    }
+  }
+
+  &__nav{
+    margin-top: 20px;
+    @media (max-width: 767.98px){
+      display: none;
+    }
   }
 
 }
 
-.video{
+.video {
   display: block;
 
-  &__img{
+  &__img {
     display: block;
     position: relative;
     width: 100%;
 
-    &:before{
+    &:before {
       content: '';
       display: block;
-      padding-top: calc(420/720*100%);
+      padding-top: calc(560 / 400 * 100%);
     }
 
-    &:after{
+    &:after {
       content: '';
       display: block;
       background: url("/images/start.png") 0 0 no-repeat;
       background-size: cover;
-      width: 118px;
-      height: 114px;
+      width: 100px;
+      height: 97px;
       position: absolute;
       z-index: 2;
       left: 50%;
       top: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
+      @media (max-width: 767.98px){
+        width: 80px;
+        height: 78px;
+      }
 
     }
 
-    img{
+    img {
       display: block;
       position: absolute;
       z-index: 1;
@@ -50,28 +70,63 @@
       height: 100%;
       object-fit: cover;
     }
+
+    video{
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
   }
 
-  &--empty{
-    .video__img:after{
+  &--empty {
+    .video__img:after {
       display: none;
     }
   }
 
-  &__title{
+  &__title {
     display: block;
     font-weight: bold;
     font-size: 36px;
-    line-height: lh(36,40);
+    line-height: lh(36, 40);
     margin-top: 15px;
+    @media (max-width: 767.98px){
+      font-size: 24px;
+    }
   }
 
-  &__txt{
+  &__txt {
     display: block;
     font-size: 24px;
-    line-height: lh(24,27);
+    line-height: lh(24, 27);
     text-align: justify;
     margin-top: 15px;
+    @media (max-width: 767.98px){
+      font-size: 16px;
+      margin-top: 10px;
+    }
   }
 
+}
+
+.fancybox-slide--video {
+  .fancybox-content {
+    width: auto!important;
+    @media (max-width: 767.98px){
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    video{
+      @media (max-width: 767.98px){
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+      }
+    }
+  }
 }

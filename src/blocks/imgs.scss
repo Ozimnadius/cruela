@@ -1,12 +1,24 @@
 .imgs{
 
   &__swiper{
-    margin-bottom: 20px;
     margin-right: -40px;
+    @media (max-width: 767.98px){
+      margin-right: -10px;
+    }
   }
 
   &__slide{
     width: 400px;
+    @media (max-width: 767.98px){
+      width: 286px;
+    }
+  }
+
+  &__nav{
+    margin-top: 20px;
+    @media (max-width: 767.98px){
+      display: none;
+    }
   }
 }
 

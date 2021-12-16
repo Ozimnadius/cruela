@@ -4,18 +4,13 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  font-size: 18px;
+  line-height: lh(18, 20);
 
-  &__txt {
-    font-size: 18px;
-    line-height: lh(18, 20);
-  }
-
-  &__img {
+  img{
+    display: block;
+    width: 100%;
     margin: 8px 0;
-
-    img {
-      width: 100%;
-      display: block;
-    }
   }
+
 }
