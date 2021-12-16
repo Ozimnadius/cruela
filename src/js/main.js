@@ -1,4 +1,5 @@
 window.addEventListener('load',function (e){
+
     const videos = new Swiper('.videos__swiper', {
         slidesPerView: 'auto',
         spaceBetween: 10,
@@ -29,6 +30,19 @@ window.addEventListener('load',function (e){
                 spaceBetween: 30,
             }
         }
+    });
+
+    $('.password__look').on('click', function (e){
+        e.preventDefault();
+
+        if($(this).hasClass('open')){
+            $('.password__val').attr("type", "password");
+            $(this).removeClass('open');
+        } else{
+            $('.password__val').attr("type", "text");
+            $(this).addClass('open');
+        }
+
     });
 
 });

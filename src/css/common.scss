@@ -263,3 +263,17 @@
   display: flex;
   justify-content: space-between;
 }
+
+.no-banners{
+  .header:before{
+    display: none;
+  }
+
+  .header__title:before{
+    display: none;
+  }
+
+  .footer:before{
+    display: none;
+  }
+}
