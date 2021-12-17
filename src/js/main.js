@@ -54,35 +54,46 @@ class Password {
             e.preventDefault();
 
             if ($(this).hasClass('open')) {
-                $('.password__letter').addClass("hide");
+                $('.password__letter').prop("type", "password");
                 $(this).removeClass('open');
             } else {
-                $('.password__letter').removeClass("hide");
+                $('.password__letter').prop("type", "text");
                 $(this).addClass('open');
             }
         });
 
         this.form.addEventListener('input', (e) => {
-
             let next = e.target.nextElementSibling;
+            let prev = e.target.previousElementSibling;
             this.password = this.password + e.data;
-            e.target.disabled = true;
-            e.target.classList.add("hide");
 
-            if (next) {
-                this.focus(next);
-            } else {
-                this.btn.classList.add("active");
-                this.input.value = this.password;
-                this.btn.focus();
+            if (e.data) {
+                if (next) {
+                    this.focus(next);
+                } else {
+                    this.btn.classList.add("active");
+                    this.input.value = this.password;
+                    this.btn.focus();
+                }
             }
 
         });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.code == "Backspace") {
+                e.preventDefault();
+                e.target.value = '';
+                let prev = e.target.previousElementSibling;
+                if (prev) {
+                    this.focus(prev);
+                }
+            }
+        });
+
     }
 
     focus(el) {
         el.focus();
-        el.select();
     }
 
 }
